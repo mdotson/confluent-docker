@@ -1,4 +1,4 @@
-Use docker-machine.
+Use a docker-machine named dev
 
 ```
 export DOCKERHOST=`docker-machine ip dev` && docker-compose up
