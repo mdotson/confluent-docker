@@ -9,7 +9,7 @@
 
 # Run it
 ```
-kafka-console-consumer --zookeeper `docker-machine ip dev`:2181 --topic helloworld
+kafka-console-consumer --zookeeper $DOCKERHOST:2181 --topic helloworld
 
-kafka-console-producer --broker-list `docker-machine ip dev`:9092 --topic helloworld
+kafka-console-producer --broker-list $DOCKERHOST:9092 --topic helloworld
 ```
