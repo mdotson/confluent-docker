@@ -1,12 +1,13 @@
-# Docker for mac
+## Docker for mac
 `export DOCKERHOST=`ipconfig getifaddr en0` && docker-compose up`
 
-# Docker-machine
+## Docker-machine
 `export DOCKERHOST=`docker-machine ip dev` && docker-compose up`
 
-# Linux
+## Linux
 `export DOCKERHOST=`hostname --ip-address` && docker-compose up`
 
+# Run it
 ```
 kafka-console-consumer --zookeeper `docker-machine ip dev`:2181 --topic helloworld
 
