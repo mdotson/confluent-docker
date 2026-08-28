@@ -1,8 +1,90 @@
 {
   "ucp": {
     "version": "draft",
-    "services": {},
+    "services": {
+      "dev.ucp.shopping": [
+        {
+          "version": "draft",
+          "spec": "https://ucp.dev/draft/specification/overview",
+          "transport": "mcp",
+          "schema": "https://ucp.dev/draft/services/shopping/mcp.openrpc.json"
+        }
+      ]
+    },
     "capabilities": {
+      "dev.ucp.shopping.checkout": [
+        {
+          "version": "draft"
+        }
+      ],
+      "dev.ucp.shopping.fulfillment": [
+        {
+          "version": "draft",
+          "extends": "dev.ucp.shopping.checkout"
+        }
+      ],
+      "dev.ucp.shopping.buyer_consent": [
+        {
+          "version": "draft",
+          "extends": "dev.ucp.shopping.checkout"
+        }
+      ],
+      "dev.ucp.shopping.discount": [
+        {
+          "version": "draft",
+          "extends": "dev.ucp.shopping.checkout"
+        }
+      ],
+      "dev.ucp.shopping.cart": [
+        {
+          "version": "draft",
+          "spec": "https://ucp.dev/draft/specification/cart",
+          "schema": "https://ucp.dev/schemas/shopping/cart.json"
+        }
+      ],
+      "dev.ucp.shopping.order": [
+        {
+          "version": "draft",
+          "spec": "https://ucp.dev/draft/specification/order",
+          "schema": "https://ucp.dev/schemas/shopping/order.json"
+        }
+      ],
+      "dev.ucp.shopping.catalog.search": [
+        {
+          "version": "draft",
+          "spec": "https://ucp.dev/draft/specification/catalog/search",
+          "schema": "https://ucp.dev/draft/schemas/shopping/catalog_search.json"
+        }
+      ],
+      "dev.ucp.shopping.catalog.lookup": [
+        {
+          "version": "draft",
+          "spec": "https://ucp.dev/draft/specification/catalog/lookup",
+          "schema": "https://ucp.dev/draft/schemas/shopping/catalog_lookup.json"
+        }
+      ],
+      "dev.shopify.catalog": [
+        {
+          "version": "draft",
+          "spec": "https://shopify.dev/docs/agents/catalog/storefront-catalog",
+          "schema": "https://shopify.dev/ucp/schemas/draft/shopify_catalog.json",
+          "extends": [
+            "dev.ucp.shopping.catalog.lookup",
+            "dev.ucp.shopping.catalog.search"
+          ]
+        }
+      ],
+      "dev.shopify.catalog.global": [
+        {
+          "version": "draft",
+          "spec": "https://shopify.dev/docs/agents/catalog/global-catalog",
+          "schema": "https://shopify.dev/ucp/schemas/draft/shopify_catalog_global.json",
+          "extends": [
+            "dev.ucp.shopping.catalog.lookup",
+            "dev.ucp.shopping.catalog.search"
+          ]
+        }
+      ],
       "dev.ucp.shopping.ask": [
         {
           "version": "draft"
