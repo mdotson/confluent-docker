@@ -1,0 +1,14 @@
+{
+  "ucp": {
+    "version": "draft",
+    "services": {},
+    "capabilities": {
+      "dev.ucp.shopping.ask": [
+        {
+          "version": "draft"
+        }
+      ]
+    },
+    "payment_handlers": {}
+  }
+}
