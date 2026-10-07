@@ -85,6 +85,11 @@
           ]
         }
       ],
+      "dev.ucp.common.ask": [
+        {
+          "version": "draft"
+        }
+      ],
       "dev.ucp.shopping.ask": [
         {
           "version": "draft"
